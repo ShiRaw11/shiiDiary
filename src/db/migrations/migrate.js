@@ -3,7 +3,9 @@ import { migrate } from "drizzle-orm/postgres-js/migrator"
 import postgres from "postgres"
 
 
-require("dotenv").config({path:".env"})
+import dotenv from "dotenv";
+
+dotenv.config({ path: ".env" });
 
 const PushMigration = async ()=>{
     const migrationClient = postgres(process.env.DB_CONNECTION_STRING, {max:1,})
