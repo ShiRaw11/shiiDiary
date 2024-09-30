@@ -5,7 +5,7 @@ export const getUser = async ()=>{
 const auth = getSupabaseAuth()
 const user = (await auth.getUser()).data.user
 
-if (!user) redirect("/login")
+if (!user) redirect("/")
 
     return user
 }
