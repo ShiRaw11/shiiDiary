@@ -1,9 +1,7 @@
 "use client";
-
 import { note } from "@/db/schemas/notes";
 import { useState } from "react";
 import { Dialog, DialogTrigger } from "./ui/dialog";
-import { AlertDialogTrigger } from "./ui/alert-dialog";
 import { Edit } from "lucide-react";
 import EditNoteDialog from "./editNoteDialog";
 

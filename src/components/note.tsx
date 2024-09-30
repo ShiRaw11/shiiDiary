@@ -32,7 +32,7 @@ function Note({ note }: Props) {
         <p>{note.text}</p>
       </div>
 
-      <EditNoteDialog open ={open} setOpen={setOpen} note={note} />
+      <EditNoteDialog  setOpen={setOpen} note={note} />
     </Dialog>
   );
 }

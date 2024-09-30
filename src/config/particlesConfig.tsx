@@ -1,6 +1,5 @@
 const isSmallScreen = window.innerWidth <= 768; 
 
-
 const ParticlesConfig = {
   autoplay: true,
   fullScreen: {
@@ -64,7 +63,7 @@ const ParticlesConfig = {
     move: {
       enable: true,
       speed: isSmallScreen ? 1 : 2, // Slower movement on small screens
-      direction: 'none',
+      direction: "bottom" as 'bottom', // Ensure this is one of the allowed types
       random: false,
       straight: false,
       out_mode: 'out',

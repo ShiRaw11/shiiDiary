@@ -1,15 +1,10 @@
-// pages/landing.js
-
-import Head from 'next/head';
 import Navbar from '@/components/navBar';
 import Image from 'next/image';
 import hero from '..//..//assets/hero.png'
 import { Lilita_One } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link'
-import { LandingParticleBackground } from '@/components/landingConfig';
 const lilita = Lilita_One({weight:"400" , subsets :['latin']})
-import { FaLock, FaEdit, FaTags, FaBell } from 'react-icons/fa'; // Import your icons
 import Features from "../../components/features";
 import HowItWorksSection from '@/components/howItWorks';
 import DiaryFooter from '@/components/footer';
@@ -20,7 +15,6 @@ export default function LandingPage() {
       <Navbar />
       <div className="flex overflow-hidden  flex-col md:flex-row items-center justify-center h-screen w-full bg-gradient-to-r from-teal to-poppver text-white ">
       <div className='relative z-10'> 
-      <LandingParticleBackground /> 
       
   <div className="w-[500px] sm:h-[300px] flex justify-center h-[600px] "> 
     

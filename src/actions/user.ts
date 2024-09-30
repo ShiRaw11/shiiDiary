@@ -5,7 +5,6 @@ import { getErrorMessage } from "@/lib/utils";
 
 export const createAccountAction = async (formData: FormData) => {
   try {
-    const username = formData.get("username") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
