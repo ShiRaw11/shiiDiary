@@ -23,7 +23,7 @@ export default function LandingPage() {
       alt="Diary Image"
       className="object-cover h-ful w-full rounded-lg relative " 
     />
-     <p className='pointer absolute bottom-2 left-4  text-[30px]'>🎇</p>
+     {/*<p className='pointer absolute bottom-2 left-4  text-[30px]'>🎇</p>*/}
   </div>
   </div>
 
