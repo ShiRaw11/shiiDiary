@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Note as NoteType } from "@/db/schemas/notes";
+import { note as NoteType } from "@/db/schemas/notes";
 import DeleteButton from "./deleteButton";
 import EditNoteDialog from "./editNoteDialog";
 import { Dialog } from "./ui/dialog";
