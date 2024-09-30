@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useTransition } from 'react'
 import toast from 'react-hot-toast'
-import { ParticleBackground } from '@/components/particleBackground'
 
 
 function LoginPage() {
@@ -30,7 +29,6 @@ const [isPending, startTransition] = useTransition()
 
   return (
 <main className='relative flex min-h-screen items-center justify-center px-4 pb-24'>
-  <ParticleBackground />
   <div className='relative z-10 bg-popover flex w-full max-w-sm flex-col items-center rounded-lg border p-8'>
       <h1
           className={`mb-8 text-2xl font-semibold ${isPending && "opacity-0"}`}
