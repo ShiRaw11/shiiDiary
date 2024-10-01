@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
 export async function middleware(request: NextRequest) {
-  const response = NextResponse.next({
+  let response = NextResponse.next({
     request: {
       headers: request.headers,
     },
@@ -10,7 +10,7 @@ export async function middleware(request: NextRequest) {
 
   const path = new URL(request.url).pathname;
 
-  const unprotectedPaths = ["/login", "/create-account", "/"];
+  const unprotectedPaths = ["/", "/login", "/create-account"];
 
   const user = await getUser(request, response);
   const isUnprotectedPath = unprotectedPaths.some((up) => path.startsWith(up));
@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
   if (user && isUnprotectedPath) {
     return NextResponse.redirect(new URL("/diary-notes", request.url));
   } else if (!user && !isUnprotectedPath) {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   return response;
