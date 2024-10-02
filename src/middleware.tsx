@@ -8,9 +8,6 @@ export async function middleware(request: NextRequest) {
   const unprotectedPaths = ["/", "/login", "/create-account"];
   const user = await getUser(request, response);
   const isUnprotectedPath = unprotectedPaths.some((up) => path.startsWith(up));
-
-  console.log('User:', user);
-  console.log('Current Path:', path);
   
   if (user && isUnprotectedPath && path !== "/diary-notes") {
       return NextResponse.redirect(new URL("/diary-notes", request.url));
